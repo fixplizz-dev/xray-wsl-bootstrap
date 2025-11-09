@@ -153,7 +153,8 @@ xray-wsl-bootstrap/
 │   ├── manage.sh         # Управление сервисом
 │   ├── check-ip.sh       # Проверка соединения
 │   ├── setup-config.sh   # Интерактивная настройка
-│   └── wsl-setup.sh      # Копирование в WSL
+│   ├── generate-config.sh # Генерация конфигураций
+│   └── parse-url.sh      # Парсинг URL/QR кодов
 ├── lib/
 │   ├── common.sh         # Общие функции
 │   ├── url_parser.sh     # Парсер URL/QR кодов
