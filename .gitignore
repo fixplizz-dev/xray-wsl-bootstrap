@@ -1,0 +1,96 @@
+# Environment & Configuration (CRITICAL - NEVER COMMIT!)
+.env
+.env.local
+.env.*.local
+.env.production
+.env.reality.example
+
+# System & OS Files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+ehthumbs.db
+.directory
+.Trash-*
+
+# Editor/IDE
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# Logs & Temp
+*.log
+logs/
+*.tmp
+tmp/
+*.temp
+temp/
+xray-access.log
+xray-error.log
+
+# Backups & Archives
+*.bak
+*.backup
+*.tar
+*.tar.gz
+*.zip
+*backup*/
+.backup/
+.xray_backup/
+
+# Private Keys & Credentials
+*.pem
+*.key
+*.pk8
+*.p8
+*.p12
+*.pfx
+*.crt
+*.cer
+*.cert
+id_rsa
+id_ecdsa
+id_ed25519
+id_dsa
+known_hosts
+credentials
+secrets
+.tokens
+
+# Build/Artifacts (general)
+build/
+dist/
+*.o
+*.a
+*.so
+
+# Runtime data and process files
+*.pid
+*.socket
+.xray/
+xray.pid
+
+# Node/Python caches (if accidentally introduced)
+node_modules/
+__pycache__/
+*.pyc
+
+# DEVELOPMENT FILES - KEEP LOCAL ONLY, NEVER COMMIT TO GIT
+.github/
+.specify/
+specs/
+tests/
+.env.test
+.gitignore.production
+.gitignore.release
+file-list.txt
+.vscode/
+DEVELOPMENT.md
+go/

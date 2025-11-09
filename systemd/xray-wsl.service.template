@@ -1,0 +1,34 @@
+[Unit]
+Description=Xray WSL VPN Service
+Documentation=https://github.com/XTLS/Xray-core
+After=network.target network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+ExecStart={{XRAY_BINARY}} run -config {{XRAY_CONFIG}}
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=mixed
+Restart=always
+RestartSec=5s
+LimitNOFILE=infinity
+
+# Security settings
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths={{XRAY_LOG_DIR}}
+PrivateTmp=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=xray-wsl
+
+[Install]
+WantedBy=multi-user.target
